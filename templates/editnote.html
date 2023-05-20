@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editnote</title>
+</head>
+<body>
+    <center>
+        <h1>Измените вашу заметку</h1>
+        <form action="/editnote/{{ id }}/" method="post">
+        <p class="center"><input name="title" type="text" value="{{ note['title'] }}" /></p>
+        <p class="center"><textarea name="text" placeholder="Текст">{{ note['text'] }}</textarea></p>
+        <p></p>
+        <button>Сохранить</button></form>
+    </center>
+</body>
+</html>

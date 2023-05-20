@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your notes</title>
+</head>
+<body>
+    <center><h1>Ваши заметки</h1></center>
+    {% for note in notes %}
+        <br><b>{{ note['title'] }}</b>
+        <br>{{ note['text'] }}
+        <br><a href="/delnote/{{ note['number'] }}/">Удалить</a> <a href="/editnote/{{ note['number'] }}/">Изменить</a>
+        <p></p>
+    {% endfor %}
+    <center><p><a href="/delnotes">Удалить заметки</a></p></center>
+</body>
+</html>
