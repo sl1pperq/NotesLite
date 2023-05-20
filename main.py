@@ -135,7 +135,7 @@ def delete_note():
 def delnote(id):
     for i, note in enumerate(notes[:]):
         if note['number'] == id:
-            del notes[:]
+            del notes[i]
             break
     save_to_storage()
     return render_template('reg.html')
